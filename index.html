@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Identity check demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="web.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="ClearCheck demo home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>ClearCheck <span class="brand-tag">DEMO</span></span>
+        </a>
+        <span class="secure-label"><span aria-hidden="true">●</span> Sample flow</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">IDENTITY VERIFICATION</p>
+        <h1 id="page-title">A few steps to verify your details</h1>
+        <p class="intro-copy">Complete each sample check to see how a verification journey works.</p>
+      </section>
+
+      <aside class="demo-alert" aria-label="Demo safety notice">
+        <span class="alert-icon" aria-hidden="true">!</span>
+        <div>
+          <strong>Demo only — use made-up information</strong>
+          <p>This page does not contact a bank, send OTPs, or verify real identities. Never enter real Aadhaar, PAN, bank, or personal details.</p>
+        </div>
+      </aside>
+
+      <section class="verification-card" aria-label="Verification steps">
+        <div class="progress-header">
+          <div>
+            <p class="eyebrow">YOUR PROGRESS</p>
+            <p id="progress-label" class="progress-label">Step 1 of 3</p>
+          </div>
+          <span id="progress-count" class="progress-count">0/3 complete</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Verification progress" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0">
+          <span id="progress-fill"></span>
+        </div>
+
+        <nav class="step-list" aria-label="Verification steps">
+          <div class="step-item is-current" data-step-indicator="0">
+            <span class="step-number">1</span><span>Aadhaar</span>
+          </div>
+          <div class="step-item" data-step-indicator="1">
+            <span class="step-number">2</span><span>PAN</span>
+          </div>
+          <div class="step-item" data-step-indicator="2">
+            <span class="step-number">3</span><span>Bank</span>
+          </div>
+        </nav>
+
+        <div id="step-content" class="step-content"></div>
+        <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+        <div id="result" class="result" aria-live="polite" hidden></div>
+      </section>
+
+      <footer class="page-footer">
+        <span class="footer-check" aria-hidden="true">✓</span>
+        Demo information stays in this browser tab and is cleared when you refresh.
+      </footer>
+    </main>
+  </body>
+</html>
